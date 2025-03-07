@@ -32,8 +32,8 @@ def load_data(batch_size=4, client_id=0, num_clients=1):
     ])
 
     # Get the directory of the current script and then the repo root
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    repo_root = os.path.abspath(os.path.join(script_dir, '..'))
+    #script_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.abspath(os.path.join(("/content")))
 
     # Paths for training data
     train_img_path = os.path.join(repo_root, "data", "COVIDQU", "Infection Segmentation Data", "Train", "images")

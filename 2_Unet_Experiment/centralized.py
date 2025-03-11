@@ -271,7 +271,7 @@ def run_training(
             scheduler.step()
 
         # 5) Early Stopping
-        if early_stopping_patience > 0:
+        if early_stopping_patience > 0 and is_centralized:
             if dice > best_dice:
                 best_dice = dice
                 patience_counter = 0
@@ -287,13 +287,13 @@ def run_training(
                 )
                 break
 
-    # Save the best model if early stopping was triggered; otherwise, save final
-    # if best_model_state is not None:
-    #     torch.save(best_model_state, save_path)
-    #     print(f"[Early Stopping] Final model saved to {save_path}")
-    # else:
-    #     torch.save(model.state_dict(), save_path)
-    #     print(f"Final model saved to {save_path}")
+        # Save the best model if early stopping was triggered; otherwise, save final
+        # if best_model_state is not None:
+        #     torch.save(best_model_state, save_path)
+        #     print(f"[Early Stopping] Final model saved to {save_path}")
+        # else:
+        #     torch.save(model.state_dict(), save_path)
+        #     print(f"Final model saved to {save_path}")
 
 def visualize_predictions(model, test_loader, device, threshold=0.5):
     model.eval()

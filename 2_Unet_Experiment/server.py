@@ -106,7 +106,7 @@ if __name__ == "__main__":
         min_evaluate_clients=1,
         evaluate_metrics_aggregation_fn=aggregate_evaluate_metrics,
         fit_metrics_aggregation_fn=lambda results: {},  # Dummy function to silence warning
-        min_available_clients=NUM_CLIENTS,
+        #min_available_clients=NUM_CLIENTS,
         min_fit_clients=int(NUM_CLIENTS*CLIENT_PARTICIPATION_FRACTION),
     )
 

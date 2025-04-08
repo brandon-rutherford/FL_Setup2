@@ -10,13 +10,15 @@ Pipenv is used to manage dependencies. You can read more about it in the [Pipenv
 
 Install dependencies from Pipfile:
 
-```shell
+```shell 
 pipenv install
 ```
 
 This command creates a dedicated virtual environment isolated from the system-wide installation. The dependencies in Pipfile are installed in the environment.
 
 ### Using the environment: method 1
+
+*** I have found personally I am already in a VENV when opening a terminal - run ```deactivate``` first before creating the pipenv env
 
 Activate the Pipenv shell:
 
@@ -57,3 +59,16 @@ If you needed to add packages to the project:
 ```shell
 pipenv install <package>
 ```
+
+### Retrieving Dependencies
+```
+pipenv run pip freeze > requirements.txt
+```
+
+to create a requirements.txt file
+
+in colab run
+
+!pip install -r requirements.txt
+
+to install exact env from pipenv

@@ -5,12 +5,15 @@ name = "pypi"
 
 [packages]
 flwr = "*"
-torch = "*"
-torchvision = "*"
 grpcio = "*"
 grpcio-tools = "*"
 numpy = "<2.0"
+torchaudio = "*"
+torch = "*"
+torchvision = "*"
+segmentation-models-pytorch = "*"
 matplotlib = "*"
+pillow = "*"
 
 [dev-packages]
 
